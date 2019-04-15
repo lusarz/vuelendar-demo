@@ -1,25 +1,41 @@
 <template>
   <div>
-    <div>
+    <div class="app__block">
       <v-range-selector
         :start-date.sync="range.start"
         :end-date.sync="range.end"
       />
-      <div>SELECTED RANGE: {{ range.start || ''}} - {{ range.end || '' }}</div>
+      <div class="app__caption">
+        SELECTED RANGE:
+        <div
+          v-if="range.start && range.end"
+          class="app__dates"
+        >
+          {{ range.start }} - {{ range.end }}
+        </div>
+      </div>
     </div>
 
-    <div>
+    <div class="app__block">
       <v-day-selector
         v-model="date"
       />
 
-      <div>SELECTED DATE: {{ date || ''}}</div>
+      <div class="app__caption">
+        SELECTED DATE:
+        <div
+          v-if="date"
+          class="app__dates"
+        >
+          {{ date }}
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style src="./App.scss"></style>
-<style src="../node_modules/vuelendar/scss/vuelendar.scss"></style>
+<style src="vuelendar/scss/vuelendar.scss"></style>
 
 <script>
 import VRangeSelector from 'vuelendar/components/vl-range-selector';
