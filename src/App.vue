@@ -4,6 +4,8 @@
       <v-range-selector
         :start-date.sync="range.start"
         :end-date.sync="range.end"
+        :is-disabled="d => d > '2019-06-30'"
+        enable-single-date
       />
       <div class="app__caption">
         SELECTED RANGE:

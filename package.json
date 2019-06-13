@@ -10,7 +10,8 @@
     "build": "NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.6.8"
+    "vue": "^2.6.8",
+    "vuelendar": "^1.0.13"
   },
   "browserslist": [
     "> 1%",
@@ -28,7 +29,6 @@
     "vue-loader": "^15.7.0",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.8",
-    "vuelendar": "file:../vuelendar",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
