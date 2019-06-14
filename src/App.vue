@@ -4,6 +4,7 @@
       <v-range-selector
         :start-date.sync="range.start"
         :end-date.sync="range.end"
+        first-day-of-week="sun"
       />
       <div class="app__caption">
         SELECTED RANGE:
