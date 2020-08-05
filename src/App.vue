@@ -5,6 +5,7 @@
         :start-date.sync="range.start"
         :end-date.sync="range.end"
         first-day-of-week="sun"
+        :is-disabled="day => ['2020-08-01', '2020-08-03'].includes(day)"
       />
       <div class="app__caption">
         SELECTED RANGE:
